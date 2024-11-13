@@ -27,3 +27,6 @@ paper
 # Ignore IDE project files
 .idea/
 .vscode
+*.csv
+.cutout/
+.data/
