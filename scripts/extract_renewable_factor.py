@@ -22,8 +22,8 @@ anhui_cities = [
 ]
 
 # 读取风电和光伏数据
-wind_data = xr.open_dataset('C:/Users/dell/Documents/GitHub/atlite/data/resources/wind_factor-china-2020.nc')
-pv_data = xr.open_dataset('C:/Users/dell/Documents/GitHub/atlite/data/resources/pv_factor-china-2020.nc')
+wind_data = xr.open_dataset('./data/resources/wind_factor-china-2020.nc')
+pv_data = xr.open_dataset('./data/resources/pv_factor-china-2020.nc')
 
 # 创建存储数据的字典
 wind_data_dict = {}
@@ -54,8 +54,8 @@ wind_df = pd.DataFrame(wind_data_dict)
 pv_df = pd.DataFrame(pv_data_dict)
 
 # 保存数据
-wind_df.to_csv('C:/Users/dell/Documents/GitHub/atlite/data/resources/anhui_wind_factors_2020.csv')
-pv_df.to_csv('C:/Users/dell/Documents/GitHub/atlite/data/resources/anhui_pv_factors_2020.csv')
+wind_df.to_csv('./data/resources/anhui_wind_factors_2020.csv')
+pv_df.to_csv('./data/resources/anhui_pv_factors_2020.csv')
 
 # 打印数据信息
 print("风电数据形状:", wind_df.shape)
